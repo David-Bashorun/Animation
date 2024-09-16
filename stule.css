@@ -1,0 +1,103 @@
+.da{
+    font-size: 15px;
+    transition-property: all;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    transition-timing-function: ease;
+}
+.da:hover{
+    color: blue;
+    font-size: 25px;
+}
+.empty-box{
+    height: 40px;
+    width: 80px;
+    background-color: rgb(255, 0, 0);
+    border: 2px solid whitesmoke;
+    animation-delay: 1s;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-fill-mode: backwards;
+}
+
+@keyframes grow{
+    /* from {width: 10px;height: 5px;background: green;}
+    to {width: 100px; height:100px; background: burlywood;} */
+    30% { width: 40px; height: 70px; background-color: azure;}
+    50%{width: 100px;height: 50px;background: green;}
+    60% {width: 100px;height: 60px;background: yellow;}
+    100%{width: 100px;height: 100px;background: burlywood;}
+}
+
+.hero{
+    margin: 0;
+    padding: 0;
+    background-image: url(/html/images/Shoe1.jpg);
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    background-position: center;
+
+
+
+
+    animation-name: animate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes animate{
+    from{opacity:0%;width: 0%;}
+    to{opacity: 100%;width: 100%;}
+}
+.title{
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-align: center;
+
+    animation-name: fade-in;
+    animation-delay: 2s;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-in{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+
+.box2{
+    top: 30%;
+    left: 50%;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-color: cadetblue;
+    box-shadow: 2px 2px 4px black;
+    border: 1px solid rgb(83,82,83);
+    border-radius: 5px;
+    transform: (-50%,-50%);
+    animation-name: transform;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transform {
+    /* 100% {transform: scaleX(0.1) scaleY(0.1);} */
+    /* 100%{transform: translateX(50%) translateY(10%);} */
+    /* 100% {transform: rotate(90deg);} */
+    /* 100% {transform: rotate(180deg);} */
+    /* 100% {transform: skewX(50deg);} */
+    /* 100% {transform: skew(90deg, 0deg);} */
+    100%{transform: scaleX(0.5) scaleY(0.5) rotate(360deg) translateX(50px);}
+}
